@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity</title>
+</head>
+<body>
+    <script>
+        const job=[               //syntax of create array of object
+            {id:1,isActive:true},
+            {id:2,isActive:false},
+            {id:3,isActive:true},
+            {id:4,isActive:true}] 
+            for(var i=0;i<job.length;i++) 
+            {
+                if(job[i].isActive)
+                    document.write("<h1>"+job[i].id+"</h1>")
+            }
+            const activeJob=job.filter(j=>j.isActive)
+            console.log(activeJob);
+    </script>
+</body>
+</html>
