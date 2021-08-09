@@ -11,9 +11,25 @@
         var tv={
             size:55,
             Brand:"samsung",
-            price:50000
+            price:50000,
+            fullname:function()
+            {
+                return this.name+" and Price "+this.price;
+            }
         }
         console.log(tv.size);
+        console.log(tv.fullname());
+        function myClass(size,price,brand)
+        {
+            this.name=name;
+            this.price=price;
+            this.brand=brand;
+            
+        }
+        var obj=new myClass(65,60000,'LG')
+        var obj1=new myClass(65,60000,'Dell')
+        document.write("<h1>"+obj.brand+" : "+obj.price+"</h1>")
+        document.write("<h1>"+obj1.brand+" : "+obj1.price+"</h1>")
     </script>
 </body>
 </html>
