@@ -8,28 +8,35 @@
 </head>
 <body>
     <script>
+        //object
         var tv={
             size:55,
             Brand:"samsung",
             price:50000,
             fullname:function()
             {
-                return this.name+" and Price "+this.price;
+                return this.name+" and Price "+this.price; //using  this
             }
         }
         console.log(tv.size);
         console.log(tv.fullname());
+
+        //object constructor
+
         function myClass(size,price,brand)
         {
-            this.name=name;
+            this.size=size;
             this.price=price;
             this.brand=brand;
-            
+            this.myFun=function()
+            {
+                return "Size : "+this.size;
+            }
         }
         var obj=new myClass(65,60000,'LG')
-        var obj1=new myClass(65,60000,'Dell')
-        document.write("<h1>"+obj.brand+" : "+obj.price+"</h1>")
-        document.write("<h1>"+obj1.brand+" : "+obj1.price+"</h1>")
+        var obj1=new myClass(55,60000,'Dell')
+        document.write("<h1>"+obj.brand+" : "+obj.price+"</h1>"+obj.myFun())
+        document.write("<h1>"+obj1.brand+" : "+obj1.price+"</h1>"+obj1.myFun())
     </script>
 </body>
 </html>
